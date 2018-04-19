@@ -2,6 +2,9 @@ package jgraphics;
 import java.util.ArrayList;
 import java.util.List;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.ListView;
 import net.dean.jraw.RedditClient;
 import net.dean.jraw.http.NetworkAdapter;
 import net.dean.jraw.http.OkHttpNetworkAdapter;
@@ -27,24 +30,17 @@ public class reddithello {
     RedditClient reddit = OAuthHelper.automatic(adapter, credentials);
 	
 	
-    public static void startReddit() {
-    	
-
       
-    }
-    
-    
     
     public ArrayList<String> frontpage() {
     
-    	
-     ArrayList<String> frontpage = new ArrayList<String>();
+    	 ArrayList<String> frontpage = new ArrayList<String>();
     	
     	
       DefaultPaginator<Submission> frontPage = reddit.frontPage()
     		    .sorting(SubredditSort.TOP)
     		    .timePeriod(TimePeriod.DAY)
-    		    .limit(5)
+    		    .limit(15)
     		    .build();
 
     		Listing<Submission> submissions = frontPage.next();
@@ -52,7 +48,7 @@ public class reddithello {
     		    System.out.println(s.getTitle());
     		    frontpage.add(s.getTitle());
     		}
-      
+    		
     		return frontpage; 
     }
 
