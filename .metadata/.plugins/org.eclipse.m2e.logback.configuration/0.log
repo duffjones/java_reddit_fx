@@ -1,0 +1,155 @@
+2018-04-19 12:12:59,403 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-04-19 12:15:00,539 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-04-19 12:16:15,911 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JavaFXProject:JavaFXProject:0.0.1-SNAPSHOT @ C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\pom.xml.
+2018-04-19 12:16:15,911 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JavaFXProject:JavaFXProject:0.0.1-SNAPSHOT @ C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\pom.xml.
+2018-04-19 12:16:17,593 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:16:17,654 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:16:17,657 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:16:17,750 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:16:19,772 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JavaFXProject:JavaFXProject:0.0.1-SNAPSHOT @ C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\pom.xml.
+2018-04-19 12:16:20,204 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:16:20,208 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:16:20,210 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:16:20,215 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:18:21,233 [Worker-6] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JavaFXProject:JavaFXProject:0.0.1-SNAPSHOT @ C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\pom.xml.
+2018-04-19 12:18:21,369 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:18:21,374 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:18:21,376 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:18:21,386 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:19:08,847 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2018-04-19 12:19:17,221 [Worker-12] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject
+2018-04-19 12:19:17,222 [Worker-12] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B 
+2018-04-19 12:22:52,275 [Worker-12] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2018-04-19 12:22:52,553 [Worker-12] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JavaFXProject:JavaFXProject:0.0.1-SNAPSHOT @ C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\pom.xml.
+2018-04-19 12:22:52,717 [Worker-12] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /JavaFXProject/src
+2018-04-19 12:22:52,722 [Worker-12] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /JavaFXProject/src/test/java because it overlaps with /JavaFXProject/src
+2018-04-19 12:22:52,831 [Worker-12] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2018-04-19 12:22:53,055 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:22:53,065 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:22:53,066 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:22:53,075 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:23:46,334 [Worker-12] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JavaFXProject:JavaFXProject:0.0.1-SNAPSHOT @ C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\pom.xml.
+2018-04-19 12:23:46,606 [Worker-12] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/dean/jraw/JRAW/${jraw.version}/JRAW-${jraw.version}.pom
+2018-04-19 12:23:46,612 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for net.dean.jraw:JRAW:jar:${jraw.version} is missing, no dependency information available
+2018-04-19 12:23:46,779 [Worker-12] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/dean/jraw/JRAW/${jraw.version}/JRAW-${jraw.version}.jar
+2018-04-19 12:23:46,849 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for net.dean.jraw:JRAW:jar:${jraw.version} is missing, no dependency information available
+2018-04-19 12:23:46,872 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for net.dean.jraw:JRAW:jar:${jraw.version} is missing, no dependency information available
+2018-04-19 12:23:46,984 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:23:47,007 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:23:47,010 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:23:47,024 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:25:44,570 [Worker-11] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JavaFXProject:JavaFXProject:0.0.1-SNAPSHOT @ C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\pom.xml.
+2018-04-19 12:25:44,721 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:25:44,731 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:25:44,738 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:25:44,743 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:25:45,967 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:25:45,972 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:25:45,975 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:25:45,981 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:25:52,526 [Worker-14] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JavaFXProject:JavaFXProject:0.0.1-SNAPSHOT @ C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\pom.xml.
+2018-04-19 12:25:52,720 [Worker-14] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/dean/jraw/JRAW/${jraw.1.0.0}/JRAW-${jraw.1.0.0}.pom
+2018-04-19 12:25:52,729 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for net.dean.jraw:JRAW:jar:${jraw.1.0.0} is missing, no dependency information available
+2018-04-19 12:25:52,960 [Worker-14] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/dean/jraw/JRAW/${jraw.1.0.0}/JRAW-${jraw.1.0.0}.jar
+2018-04-19 12:25:53,009 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for net.dean.jraw:JRAW:jar:${jraw.1.0.0} is missing, no dependency information available
+2018-04-19 12:25:53,018 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for net.dean.jraw:JRAW:jar:${jraw.1.0.0} is missing, no dependency information available
+2018-04-19 12:25:53,100 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:25:53,107 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:25:53,115 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:25:53,120 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:28:07,050 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JavaFXProject:JavaFXProject:0.0.1-SNAPSHOT @ C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\pom.xml.
+2018-04-19 12:28:07,132 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/net/dean/jraw/JRAW/1.0.0/JRAW-1.0.0.pom
+2018-04-19 12:28:07,173 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/net/dean/jraw/JRAW/1.0.0/JRAW-1.0.0.pom
+2018-04-19 12:28:07,231 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-stdlib/1.2.10/kotlin-stdlib-1.2.10.pom
+2018-04-19 12:28:07,253 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-stdlib/1.2.10/kotlin-stdlib-1.2.10.pom
+2018-04-19 12:28:07,314 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/org/jetbrains/annotations/13.0/annotations-13.0.pom
+2018-04-19 12:28:07,341 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/com/squareup/okhttp3/okhttp/3.9.1/okhttp-3.9.1.pom
+2018-04-19 12:28:07,362 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/com/squareup/okhttp3/okhttp/3.9.1/okhttp-3.9.1.pom
+2018-04-19 12:28:07,388 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/com/squareup/okhttp3/parent/3.9.1/parent-3.9.1.pom
+2018-04-19 12:28:07,444 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/com/squareup/okhttp3/parent/3.9.1/parent-3.9.1.pom
+2018-04-19 12:28:07,472 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
+2018-04-19 12:28:07,494 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
+2018-04-19 12:28:07,517 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/com/squareup/okio/okio/1.13.0/okio-1.13.0.pom
+2018-04-19 12:28:07,539 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/com/squareup/okio/okio/1.13.0/okio-1.13.0.pom
+2018-04-19 12:28:07,566 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/com/squareup/okio/okio-parent/1.13.0/okio-parent-1.13.0.pom
+2018-04-19 12:28:07,589 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/com/squareup/okio/okio-parent/1.13.0/okio-parent-1.13.0.pom
+2018-04-19 12:28:07,665 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/net/dean/jraw/moshi-deeply-nested/1.0.0/moshi-deeply-nested-1.0.0.pom
+2018-04-19 12:28:07,687 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/net/dean/jraw/moshi-deeply-nested/1.0.0/moshi-deeply-nested-1.0.0.pom
+2018-04-19 12:28:08,336 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/net/dean/jraw/JRAW/1.0.0/JRAW-1.0.0.jar
+2018-04-19 12:28:08,699 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/net/dean/jraw/JRAW/1.0.0/JRAW-1.0.0.jar
+2018-04-19 12:28:08,783 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-stdlib/1.2.10/kotlin-stdlib-1.2.10.jar
+2018-04-19 12:28:08,893 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-stdlib/1.2.10/kotlin-stdlib-1.2.10.jar
+2018-04-19 12:28:08,909 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/org/jetbrains/annotations/13.0/annotations-13.0.jar
+2018-04-19 12:28:09,062 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/org/jetbrains/annotations/13.0/annotations-13.0.jar
+2018-04-19 12:28:09,081 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/com/squareup/okhttp3/okhttp/3.9.1/okhttp-3.9.1.jar
+2018-04-19 12:28:09,138 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/com/squareup/okhttp3/okhttp/3.9.1/okhttp-3.9.1.jar
+2018-04-19 12:28:09,154 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar
+2018-04-19 12:28:09,198 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar
+2018-04-19 12:28:09,266 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/net/dean/jraw/moshi-deeply-nested/1.0.0/moshi-deeply-nested-1.0.0.jar
+2018-04-19 12:28:09,304 [Worker-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/net/dean/jraw/moshi-deeply-nested/1.0.0/moshi-deeply-nested-1.0.0.jar
+2018-04-19 12:28:10,015 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:28:10,023 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:28:10,025 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:28:10,039 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:28:11,267 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:28:11,273 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:28:11,275 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:28:11,279 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:28:55,865 [Worker-12] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject
+2018-04-19 12:28:55,870 [Worker-12] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2018-04-19 12:28:58,267 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:28:58,272 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:28:58,278 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:28:58,287 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:53:57,298 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:53:57,303 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:53:57,310 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:53:57,319 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:54:19,650 [Worker-14] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: JavaFXProject:JavaFXProject:0.0.1-SNAPSHOT @ C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\pom.xml.
+2018-04-19 12:54:19,843 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:54:19,851 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:54:19,857 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:54:19,865 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:54:50,073 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:54:50,081 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:54:50,087 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:54:50,095 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:59:33,017 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:59:33,037 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:59:33,042 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:59:33,051 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 12:59:50,248 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://jcenter.bintray.com/com/squareup/okhttp3/okhttp/3.9.1/okhttp-3.9.1-sources.jar
+2018-04-19 12:59:50,316 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/com/squareup/okhttp3/okhttp/3.9.1/okhttp-3.9.1-sources.jar
+2018-04-19 12:59:50,395 [Worker-19] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.squareup.okhttp3:okhttp:3.9.1
+2018-04-19 12:59:50,611 [Worker-18] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:59:50,616 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 12:59:50,621 [Worker-18] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 12:59:50,626 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 13:17:13,950 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 13:17:13,954 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 13:17:13,960 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 13:17:13,968 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 13:20:47,937 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 13:20:47,942 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 13:20:47,947 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 13:20:47,956 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 13:25:47,493 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 13:25:47,497 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 13:25:47,503 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 13:25:47,512 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 13:29:34,342 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 13:29:34,347 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 13:29:34,352 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 13:29:34,360 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 13:37:25,166 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 13:37:25,171 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 13:37:25,176 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 13:37:25,185 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 13:39:35,330 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 13:39:35,335 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 13:39:35,340 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 13:39:35,349 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources
+2018-04-19 13:42:32,176 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 13:42:32,181 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\main\resources
+2018-04-19 13:42:32,186 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-19 13:42:32,194 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Trevor\Desktop\Java Graphics\JavaFXProject\src\test\resources

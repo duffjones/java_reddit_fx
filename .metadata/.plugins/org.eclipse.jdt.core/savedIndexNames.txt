@@ -1,0 +1,8 @@
+INDEX VERSION 1.130+C:\Users\Trevor\Desktop\Java Graphics\.metadata\.plugins\org.eclipse.jdt.core
+2278863508.index
+389301633.index
+810232054.index
+2533074833.index
+2498283261.index
+2711125290.index
+1743334282.index

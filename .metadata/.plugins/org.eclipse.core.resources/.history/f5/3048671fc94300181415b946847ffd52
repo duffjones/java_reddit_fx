@@ -1,0 +1,16 @@
+package jgraphics;
+import net.dean.jraw.http.UserAgent;
+
+public class reddithello {
+
+    public static void main(String[] args) {
+        // Prints "Hello, World" to the terminal window.
+        System.out.println("Hello, World");
+        
+        UserAgent userAgent = new UserAgent("bot", "com.example.usefulbot", "v0.1", "mattbdean");
+        
+        
+        
+    }
+
+}

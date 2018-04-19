@@ -1,0 +1,29 @@
+package jgraphics;
+import net.dean.jraw.RedditClient;
+import net.dean.jraw.http.NetworkAdapter;
+import net.dean.jraw.http.OkHttpNetworkAdapter;
+import net.dean.jraw.http.UserAgent;
+import net.dean.jraw.oauth.Credentials;
+import net.dean.jraw.oauth.OAuthHelper;
+
+public class reddithello {
+
+    public static void main(String[] args) {
+        // Prints "Hello, World" to the terminal window.
+        System.out.println("Hello, World");
+        
+        UserAgent userAgent = new UserAgent("bot", "com.example.usefulbot", "v0.1", "uobcs_testreddit");
+        
+     // Create our credentials
+        Credentials credentials = Credentials.script("<uobcs_testreddit>", "<uobtest>",
+            "<7AC5Ejz2s85-Bw>", "<bs00x4GBNrfYgTUkcXMcmnQS00s>");
+
+        // This is what really sends HTTP requests
+        NetworkAdapter adapter = new OkHttpNetworkAdapter(userAgent);
+
+        // Authenticate and get a RedditClient instance
+        RedditClient reddit = OAuthHelper.automatic(adapter, credentials);
+        
+    }
+
+}
