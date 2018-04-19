@@ -1,4 +1,7 @@
 package jgraphics;
+import java.util.ArrayList;
+import java.util.List;
+
 import net.dean.jraw.RedditClient;
 import net.dean.jraw.http.NetworkAdapter;
 import net.dean.jraw.http.OkHttpNetworkAdapter;
@@ -13,89 +16,46 @@ import net.dean.jraw.oauth.OAuthHelper;
 import net.dean.jraw.pagination.DefaultPaginator;
 
 public class reddithello {
+	
+    UserAgent userAgent = new UserAgent("uob_bot", "com.example.usefulbot", "v0.1", "uobcs_testreddit");
+    
+    Credentials credentials = Credentials.script("uobcs_testreddit", "uobtest",
+    "7AC5Ejz2s85-Bw", "bs00x4GBNrfYgTUkcXMcmnQS00s");
+  	
+    NetworkAdapter adapter = new OkHttpNetworkAdapter(userAgent);
+    
+    RedditClient reddit = OAuthHelper.automatic(adapter, credentials);
+	
+	
+    public static void startReddit() {
+    	
 
-    public static void main(String[] args) {
+      
+    }
+    
+    
+    
+    public ArrayList<String> frontpage() {
+    
     	
-    	UserAgent userAgent = new UserAgent("uob_bot", "com.example.usefulbot", "v0.1", "uobcs_testreddit");
-
+     ArrayList<String> frontpage = new ArrayList<String>();
     	
-      Credentials credentials = Credentials.script("uobcs_testreddit", "uobtest",
-      "7AC5Ejz2s85-Bw", "bs00x4GBNrfYgTUkcXMcmnQS00s");
     	
-      NetworkAdapter adapter = new OkHttpNetworkAdapter(userAgent);
-      
-      
-      RedditClient reddit = OAuthHelper.automatic(adapter, credentials);
-      
-      
       DefaultPaginator<Submission> frontPage = reddit.frontPage()
     		    .sorting(SubredditSort.TOP)
     		    .timePeriod(TimePeriod.DAY)
-    		    .limit(30)
+    		    .limit(5)
     		    .build();
 
     		Listing<Submission> submissions = frontPage.next();
     		for (Submission s : submissions) {
     		    System.out.println(s.getTitle());
+    		    frontpage.add(s.getTitle());
     		}
       
-      
-      
-      
-      
-      
-      
-      
-      
-      //RedditClient reddit = OAuthHelper.automatic(adapter, credentials);
-    	//RedditClient reddit = OAuthHelper.automatic(adapter, Credentials.script);
+    		return frontpage; 
     }
 
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	//        // Prints "Hello, World" to the terminal window.
-//        System.out.println("Hello, World");
-//        
-//        
-//        
-//        RedditClient redditClient = new RedditClient(userAgent);
-//        
-//        
-//        
-//     // Create our credentials
-
-//
-//        
-//        
-//        OAuthData authData = redditClient.getOAuthHelper().easyAuth(credentials);
-//        redditClient.authenticate(authData);
-//        
-//        
-//        // This is what really sends HTTP requests
-//       
-//
-//
-//        
-//        
-//        
-//        
-        
-        
-        
-        
-        
-        
         
 
 }
