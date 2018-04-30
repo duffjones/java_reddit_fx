@@ -23,35 +23,6 @@ public class MainGraphicsYo extends Application {
         launch(args);
     }
     
-//    @Override
-//    public void start(Stage primaryStage) {
-//        primaryStage.setTitle("Hello World!");
-//        
-//        RedditHandler reddit = new RedditHandler(); 
-//        ArrayList<String> frontpage = reddit.frontpage();
-//
-//        Button btn = new Button();
-//        btn.setText("Reddit Test");
-//        btn.setOnAction(new EventHandler<ActionEvent>() {
-// 
-//            @Override
-//            public void handle(ActionEvent event) {
-//                System.out.println("Hello World!");
-//            }
-//        });
-//        
-//        ListView<String> list = new ListView<String>();
-//        ObservableList<String> items = FXCollections.observableArrayList (frontpage);
-//        list.setItems(items);
-//        list.setPrefWidth(100);
-//        list.setPrefHeight(70);
-//        
-//        StackPane root = new StackPane();
-//        root.getChildren().add(btn);
-//        root.getChildren().add(list);
-//        primaryStage.setScene(new Scene(root, 300, 250));
-//        primaryStage.show();
-//    }
     
     @Override
     public void start(Stage stage) throws Exception {

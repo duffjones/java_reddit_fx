@@ -2,6 +2,8 @@ package jgraphics;
 import java.util.ArrayList;
 import java.util.List;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import net.dean.jraw.RedditClient;
 import net.dean.jraw.http.NetworkAdapter;
 import net.dean.jraw.http.OkHttpNetworkAdapter;
@@ -73,47 +75,29 @@ public class RedditHandler {
     }
     	
     	
+   
+    
+    public Image madeimage() {
+        
     	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-//    	BarebonesPaginator<Subreddit> paginator = reddit.me().subreddits("subscriber")
-//    		    // Request as many items as possible
-//    		    .limit(Paginator.RECOMMENDED_MAX_LIMIT)
-//    		    .build();
-//
-//    		List<Subreddit> subscribed = new ArrayList<Subreddit>();
-//
-//    		// Paginator implements Iterable, so we can use the enhanced for loop to iterate the Paginator until reddit
-//    		// can't give us anything else. Don't do this for posts on a subreddit or the front page!
-//    		for (Listing<Subreddit> page : paginator) {
-//    			System.out.print(page);
-//    		    subscribed.addAll(page);
-//    		}
-//
-//    		// Do something with `subscribed`
-//    		 System.out.print("PRINTING FIRST ELEMENT");
-//    	 System.out.print(subscribed.get(1).getTitle());
-
-
+    Image image = new Image("https://i.imgur.com/bfvBnwD.png", true) ; 
     
 
+   		return image; 
+   }
+    
     public ArrayList<String> frontpageself() {
         
    	 ArrayList<String> frontpage = new ArrayList<String>();
      DefaultPaginator<Submission> frontPage = reddit.frontPage()
-   		    .sorting(SubredditSort.TOP)
+   		    //.sorting(SubredditSort.TOP)
    		    .timePeriod(TimePeriod.DAY)
    		    .limit(20)
    		    .build();
 
    		Listing<Submission> submissions = frontPage.next();
    		for (Submission s : submissions) {
-   		    frontpage.add(s.getAuthor());
+   		    frontpage.add(s.getSelfText());
    		
    		}
    		return frontpage; 

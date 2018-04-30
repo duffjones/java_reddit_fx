@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
@@ -12,7 +14,7 @@
          <children>
             <VBox layoutX="-2.0" layoutY="-4.0" prefHeight="575.0" prefWidth="430.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: cee3f8;">
+                  <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: cee3f8;">
                      <children>
                         <Text layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FRONT PAGE OF REDDIT" textAlignment="CENTER" wrappingWidth="430.0">
                            <font>
@@ -26,8 +28,10 @@
          </children></AnchorPane>
     <AnchorPane fx:id="accordion" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
-            <Label fx:id="label" layoutX="151.0" layoutY="144.0" text="Label" />
-            <Button layoutX="151.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Button" />
+            <Label fx:id="label" layoutX="93.0" layoutY="32.0" text="Label" />
+            <Button layoutX="241.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Button" />
+            <WebView fx:id="webv" layoutX="41.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" />
+            <ImageView fx:id="imagev" fitHeight="150.0" fitWidth="200.0" layoutX="121.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true" />
          </children></AnchorPane>
   </items>
 </SplitPane>
