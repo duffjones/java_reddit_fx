@@ -10,26 +10,19 @@
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="495.0" prefWidth="363.0">
          <children>
-            <VBox layoutX="-2.0" layoutY="-4.0" />
-            <Accordion fx:id="accord" layoutY="7.0" prefHeight="569.0" prefWidth="430.0">
-              <panes>
-                <TitledPane animated="false" text="untitled 1">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </TitledPane>
-                <TitledPane animated="false" text="untitled 2">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </TitledPane>
-                <TitledPane animated="false" text="untitled 3">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </TitledPane>
-              </panes>
-            </Accordion>
+            <VBox layoutX="-2.0" layoutY="-4.0" prefHeight="575.0" prefWidth="430.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: cee3f8;">
+                     <children>
+                        <Text layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FRONT PAGE OF REDDIT" textAlignment="CENTER" wrappingWidth="430.0">
+                           <font>
+                              <Font name="Helvetica World" size="29.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Accordion fx:id="accord" prefHeight="540.0" prefWidth="430.0" style="-fx-background-color: light grey;" />
+               </children></VBox>
          </children></AnchorPane>
     <AnchorPane fx:id="accordion" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>

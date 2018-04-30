@@ -20,8 +20,10 @@ import javafx.scene.layout.AnchorPane;
 
 public class WindowController implements Initializable {
     
-	private reddithello reddit = new reddithello();
+	private RedditHandler reddit = new RedditHandler();
 	private ArrayList<String> redditdata = reddit.frontpage();
+	private ArrayList<String> redditdataself = reddit.frontpageself();
+	
 	 private int i = 0; 
 	 
     @FXML
@@ -33,19 +35,10 @@ public class WindowController implements Initializable {
     @FXML
     private Accordion accord;
 
-
-//    @FXML
-//    private ListView<String> frontpagelist;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-//        AnchorPane newPanelContent = new AnchorPane();
-//        newPanelContent.getChildren().add(new Label("Hello World"));
-//        TitledPane pane = new TitledPane("World Pane", newPanelContent);
-//        accord.getPanes().add(pane);
-        System.out.println("test");
         addTile();
-   
     }
 
 
@@ -53,11 +46,11 @@ public class WindowController implements Initializable {
     
     private void addTile() {
     	
-    	
         AnchorPane newPanelContent = new AnchorPane();
-        newPanelContent.getChildren().add(new Label(redditdata.get(i)));
+        newPanelContent.getChildren().add(new Label(redditdataself.get(i)));
+        System.out.println(redditdataself.get(i));
+        TitledPane pane = new TitledPane(redditdata.get(i), newPanelContent);
         i++;
-        TitledPane pane = new TitledPane("World Pane", newPanelContent);
         System.out.println("test 2");
         accord.getPanes().add(pane);
     }
@@ -70,18 +63,11 @@ public class WindowController implements Initializable {
     	
     	  label.setText("this is a test to change shit");
     	  
-//    	  names.addAll(
-//    	             "Adam", "Alex", "Alfred", "Albert",
-//    	             "Brenda", "Connie", "Derek", "Donny", 
-//    	             "Lynne", "Myrtle", "Rose", "Rudolph", 
-//    	             "Tony", "Trudy", "Williams", "Zach"
-//    	        );
-//    	  
-//    	  
-//    	 frontpagelist.add("test");
-    	  //frontpagelist.setItems(names);
-    	 // frontpagelist.setCellFactory(ComboBoxListCell.forListView(names));
-
+    	   
+    	  
+          for(int j=1; j<20; j++){
+              addTile(); 
+          }  
     } 
     
     

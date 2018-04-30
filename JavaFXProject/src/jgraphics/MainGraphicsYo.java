@@ -27,7 +27,7 @@ public class MainGraphicsYo extends Application {
 //    public void start(Stage primaryStage) {
 //        primaryStage.setTitle("Hello World!");
 //        
-//
+//        RedditHandler reddit = new RedditHandler(); 
 //        ArrayList<String> frontpage = reddit.frontpage();
 //
 //        Button btn = new Button();
