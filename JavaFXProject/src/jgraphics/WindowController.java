@@ -25,10 +25,11 @@ import javafx.scene.web.WebView;
 
 public class WindowController implements Initializable {
     
+	
 	private RedditHandler reddit = new RedditHandler();
 	private ArrayList<String> redditdata = reddit.frontpage();
 	private ArrayList<String> redditdataself = reddit.frontpageself();
-
+	private ArrayList<String> imagelinks = reddit.frontpageimages();
 
 	//String imageSource = "http://yourImageURL";
     
@@ -61,25 +62,36 @@ public class WindowController implements Initializable {
     
     private void addTile() {
         AnchorPane newPanelContent = new AnchorPane();
+        newPanelContent.setMaxWidth(400);
         newPanelContent.getChildren().add(new Label(redditdataself.get(i)));
         System.out.println(redditdataself.get(i));
         TitledPane pane = new TitledPane(redditdata.get(i), newPanelContent);
-        i++;
-        System.out.println("test 2");
+        
+        //System.out.println("test 2");
+        ImageView imagetest = new ImageView(new Image(new String(imagelinks.get(i))));
+
+        imagetest.setPreserveRatio(true);
+        imagetest.fitHeightProperty().bind(pane.heightProperty());
+        newPanelContent.getChildren().add(imagetest);
         accord.getPanes().add(pane);
+        i++;
     }
+    
+//    private void loadEngine(String URL) {
+//    	WebEngine engine = webv.getEngine();
+//    	engine.load(URL);
+//    }
     
    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
+    	reddit.getRedditData();
     	
-    	
+
     	String path = "https://i.imgur.com/bfvBnwD.png";
     	Image image = new Image(path);
-    	
-        WebEngine engine = webv.getEngine();
-        engine.load("https://i.imgur.com/bfvBnwD.png");
         imagev.setImage(image);
 		
     			

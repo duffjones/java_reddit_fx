@@ -26,10 +26,9 @@ public class MainGraphicsYo extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
+    
        Parent root = FXMLLoader.load(getClass().getResource("jredditFXML.fxml"));
-    
         Scene scene = new Scene(root, 761, 798);
-    
         stage.setTitle("FXML Welcome");
         stage.setScene(scene);
         stage.show();

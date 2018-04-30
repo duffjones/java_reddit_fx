@@ -24,6 +24,11 @@ public class RedditHandler {
 	
 	
 	ArrayList<String> frontpagesummary = new ArrayList<String>();
+	ArrayList<String> frontpageimglinks = new ArrayList<String>();
+	ArrayList<String> frontpagetitles = new ArrayList<String>();
+	
+	
+	
     UserAgent userAgent = new UserAgent("uob_bot", "com.example.usefulbot", "v0.1", "uobcs_testreddit");
     Credentials credentials = Credentials.script("uobcs_testreddit", "uobtest",
     "7AC5Ejz2s85-Bw", "bs00x4GBNrfYgTUkcXMcmnQS00s");
@@ -35,73 +40,41 @@ public class RedditHandler {
       public static void main(String[] args) {
 		RedditHandler reddit = new RedditHandler(); 
 		System.out.print("testing hello world");
-		reddit.frontpage();
+		reddit.getRedditData();
 		//reddit.frontpagetwo();
 	}
+     	
     
-    public List<String> subimages() {
+    public void getRedditData() {
 
-    	DefaultPaginator<Submission> earthPorn = reddit.subreddits("EarthPorn", "spaceporn").build();
+      	 DefaultPaginator<Submission> paginator = reddit.subreddits("EarthPorn", "spaceporn")
+       		    //.sorting(SubredditSort.TOP)
+       		    .timePeriod(TimePeriod.DAY)
+       		    .limit(20)
+       		    .build();
 
-    	List<String> images = new ArrayList<String>();
-    	for (Submission s : earthPorn.next()) {
-    	    if (!s.isSelfPost() && s.getUrl().contains("i.imgur.com")) {
-    	        images.add(s.getUrl());
-    	        System.out.println(s.getUrl());
-    	    }
-    	}
-    	return images; 
-    }
-    	
-    public ArrayList<String> frontpage() {
+      		Listing<Submission> submissions = paginator.next();
+      		for (Submission s : submissions) {
+      		    System.out.println(s.getTitle());
+      		    System.out.println(s.getAuthor());
+      		    frontpagesummary.add(s.getSelfText());
+      		    frontpagetitles.add(s.getTitle());
+      		    frontpageimglinks.add(s.getUrl());
 
-   	 ArrayList<String> frontpage = new ArrayList<String>();
-   	 DefaultPaginator<Submission> paginator = reddit.frontPage()
-   			    .limit(50) // 50 posts per page
-   			   // .sorting(SubredditSort.TOP) // top posts
-   			    .timePeriod(TimePeriod.DAY) // of all time
-   			    .build();
+      		}
 
-
-   		Listing<Submission> submissions = paginator.next();
-   		for (Submission s : submissions) {
-   		    System.out.println(s.getTitle());
-   		    System.out.println(s.getAuthor());
-   		    frontpage.add(s.getTitle());
-   		    frontpagesummary.add(s.getSelfText());
-   		    
-   		}
-   		return frontpage; 
-    }
-    	
-    	
-   
+       }
+       	
+    public ArrayList<String> frontpage() { return frontpagetitles;}
+       
+    public ArrayList<String> frontpageself() {return frontpagesummary; }
     
+    public ArrayList<String> frontpageimages() {return frontpageimglinks;}
+
     public Image madeimage() {
-        
-    	
-    Image image = new Image("https://i.imgur.com/bfvBnwD.png", true) ; 
-    
-
-   		return image; 
-   }
-    
-    public ArrayList<String> frontpageself() {
-        
-   	 ArrayList<String> frontpage = new ArrayList<String>();
-     DefaultPaginator<Submission> frontPage = reddit.frontPage()
-   		    //.sorting(SubredditSort.TOP)
-   		    .timePeriod(TimePeriod.DAY)
-   		    .limit(20)
-   		    .build();
-
-   		Listing<Submission> submissions = frontPage.next();
-   		for (Submission s : submissions) {
-   		    frontpage.add(s.getSelfText());
-   		
-   		}
-   		return frontpage; 
-   }
+    	Image image = new Image("https://i.imgur.com/bfvBnwD.png", true) ; 
+    	return image; 
+    }
 
 
 }
