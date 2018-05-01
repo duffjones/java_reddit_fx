@@ -27,6 +27,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
@@ -37,6 +38,15 @@ public class SecondController implements Initializable {
 	
 	private RedditHandler reddit = new RedditHandler();
 	ArrayList<String> sublinks = new ArrayList<String>();
+	private String subredditname; 
+	
+	public void setSubreddit(String subreddit){
+	    this.subredditname = subreddit;
+	}
+	
+	
+	
+	
 //	private ArrayList<String> redditdata = reddit.frontpage();
 //	private ArrayList<String> redditdataself = reddit.frontpageself();
 //	private ArrayList<String> imagelinks = reddit.frontpageimages();
@@ -60,7 +70,9 @@ public class SecondController implements Initializable {
     
     @FXML
     private VBox subredphotos; 
-
+    
+    @FXML 
+    private Label label; 
 //    @FXML 
 //    private WebView webv; 
 //    
@@ -113,18 +125,30 @@ public class SecondController implements Initializable {
 //    }
     
     private void addImages() {
-
+    	for(int jj=1; jj<6; jj++){
+    		
+    	    HBox hbox = new HBox();
+    	   
+    	
+        for(int j=1; j<5; j++){
+           
+       
         ImageView imagetest = new ImageView(new Image(new String((sublinks.get(i)))));
         imagetest.setPreserveRatio(true);
-        imagetest.setFitHeight(100);
-        imagetest.setFitWidth(100);
+        imagetest.setFitHeight(200);
+        //imagetest.setFitWidth(200);
         //imagetest.fitHeightProperty().bind(subredphotos.heightProperty());
         
         //subredphotos.getChildren().add(imagetest);
         //subredphotos.add((imagetest), 0, 0);
-        subredphotos.getChildren().add(imagetest);
+        hbox.getChildren().add(imagetest);
         i++; 
+        }  
+        subredphotos.getChildren().add(hbox);
+    	}
         
+        
+        //put hboxes in the vboxes so you got boxes in your boxes bro
     }
     
     
@@ -140,13 +164,13 @@ public class SecondController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
     	//reddit.getRedditData();
-    	
-    	sublinks = reddit.getSubredditImgs("earthporn");
-		
+    	String subby = Passer.getInstance().currentSubreddit(); 
+    	System.out.println(subby);
+    	label.setText(subby);
+    	sublinks = reddit.getSubredditImgs(subby);
+    	 addImages();  
  
-          for(int j=1; j<20; j++){
-              addImages();  
-          }  
+
     } 
     
     

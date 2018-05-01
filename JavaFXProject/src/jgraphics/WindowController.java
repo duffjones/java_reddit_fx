@@ -1,6 +1,5 @@
 package jgraphics;
 
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -40,13 +39,14 @@ public class WindowController implements Initializable {
 	private ArrayList<String> redditdataself = reddit.frontpageself();
 	private ArrayList<String> imagelinks = reddit.frontpageimages();
 	private Stage stage; 
+	private String name; 
 
 
 	
 	 private int i = 0; 
 	 
     @FXML
-    private TextField field;
+    private TextField subtextfield;
 
     @FXML
     private Label label;
@@ -78,10 +78,16 @@ public class WindowController implements Initializable {
     public void buttonClicked(ActionEvent event)throws IOException
     {
         Parent root;
+        
+        
+         name = subtextfield.getText();
+         Passer.getInstance().setSubreddit(name);
+         //label.setText(name);
         if(event.getSource()==btnBeginTargeting)
         {
-           root=FXMLLoader.load(getClass().getResource("jred_secondary.fxml"));
+           root = FXMLLoader.load(getClass().getResource("jred_secondary.fxml"));
            btnBeginTargeting.getScene().setRoot(root);
+
         }
         if(event.getSource()==btnExit)
         {
