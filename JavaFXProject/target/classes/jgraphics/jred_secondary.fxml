@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jgraphics.SecondController">
+   <children>
+      <Text layoutX="256.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subreddit Name" wrappingWidth="308.13671875">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <VBox fx:id="subredphotos" layoutX="114.0" layoutY="108.0" prefHeight="416.0" prefWidth="572.0" />
+   </children>
+</AnchorPane>

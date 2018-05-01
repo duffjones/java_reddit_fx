@@ -62,8 +62,23 @@ public class RedditHandler {
       		    frontpageimglinks.add(s.getUrl());
 
       		}
-
        }
+    
+    public ArrayList<String> getSubredditImgs(String subreddit) {
+    	
+    	ArrayList<String> sublinks = new ArrayList<String>(); 
+     	 DefaultPaginator<Submission> paginator = reddit.subreddits(subreddit, "spaceporn")
+        		    .sorting(SubredditSort.TOP)
+        		    .timePeriod(TimePeriod.DAY)
+        		    .limit(20)
+        		    .build();
+
+       		Listing<Submission> submissions = paginator.next();
+       		for (Submission s : submissions) {
+       		    sublinks.add(s.getUrl());
+       		}
+       		return sublinks;
+    }
        	
     public ArrayList<String> frontpage() { return frontpagetitles;}
        

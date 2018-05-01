@@ -1,5 +1,6 @@
 package jgraphics;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javafx.application.Application;
@@ -32,7 +33,20 @@ public class MainGraphicsYo extends Application {
         stage.setTitle("FXML Welcome");
         stage.setScene(scene);
         stage.show();
+        WindowController controller = new WindowController(); 
+        controller.setStage(stage);
     }
+    
+//    public void changeRoots(Button btnBeginTargeting) throws IOException {
+//    	
+//       // appStage=(Stage)btnBeginTargeting.getScene().getWindow();
+//        Parent root; 
+//        root=FXMLLoader.load(getClass().getResource("jred_secondary.fxml"));
+//        this.scene.setRoot(root);
+//    	
+//    	
+//    }
+    
     
     
     
