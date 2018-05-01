@@ -50,7 +50,7 @@ public class RedditHandler {
       	 DefaultPaginator<Submission> paginator = reddit.subreddits("EarthPorn", "spaceporn")
        		    //.sorting(SubredditSort.TOP)
        		    .timePeriod(TimePeriod.DAY)
-       		    .limit(20)
+       		    .limit(10)
        		    .build();
 
       		Listing<Submission> submissions = paginator.next();
@@ -67,18 +67,29 @@ public class RedditHandler {
     public ArrayList<String> getSubredditImgs(String subreddit) {
     	
     	ArrayList<String> sublinks = new ArrayList<String>(); 
-     	 DefaultPaginator<Submission> paginator = reddit.subreddits(subreddit, "spaceporn")
-        		    .sorting(SubredditSort.TOP)
-        		    .timePeriod(TimePeriod.DAY)
-        		    .limit(20)
+     	 DefaultPaginator<Submission> paginator = reddit
+     			 .subreddit(subreddit)
+     			    .posts()
+     			    .limit(20)
+     			    .sorting(SubredditSort.TOP)
+     			    .timePeriod(TimePeriod.WEEK)
         		    .build();
 
        		Listing<Submission> submissions = paginator.next();
        		for (Submission s : submissions) {
-       		    sublinks.add(s.getUrl());
+       			if (!s.isSelfPost() 
+       					//&& s.getUrl().contains("i.imgur.com")
+       					) {
+       				sublinks.add(s.getUrl());
+       		    }
+       		    
        		}
+       		
+       		if(sublinks.size() > 3) {
        		return sublinks;
     }
+       		else return null; 
+       		}
        	
     public ArrayList<String> frontpage() { return frontpagetitles;}
        

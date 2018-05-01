@@ -79,10 +79,15 @@ public class WindowController implements Initializable {
     {
         Parent root;
         
-        
-         name = subtextfield.getText();
-         Passer.getInstance().setSubreddit(name);
-         //label.setText(name);
+         if(subtextfield.getText().trim().isEmpty()) {
+        	 System.out.println("textfield is empty, using default subreddit");
+        	 Passer.getInstance().setSubreddit("earthporn");
+         }
+         else {
+        	 name = subtextfield.getText();
+        	 Passer.getInstance().setSubreddit(name);
+         }
+
         if(event.getSource()==btnBeginTargeting)
         {
            root = FXMLLoader.load(getClass().getResource("jred_secondary.fxml"));
@@ -106,10 +111,7 @@ public class WindowController implements Initializable {
         newPanelContent.getChildren().add(new Label(redditdataself.get(i)));
         System.out.println(redditdataself.get(i));
         TitledPane pane = new TitledPane(redditdata.get(i), newPanelContent);
-        
-        //System.out.println("test 2");
         ImageView imagetest = new ImageView(new Image(new String(imagelinks.get(i))));
-
         imagetest.setPreserveRatio(true);
         imagetest.fitHeightProperty().bind(pane.heightProperty());
         newPanelContent.getChildren().add(imagetest);
@@ -150,7 +152,7 @@ public class WindowController implements Initializable {
 		
     			
     	  label.setText("this is a test to change shit");
-          for(int j=1; j<20; j++){
+          for(int j=1; j<5; j++){
               addTile(); 
           }  
     } 

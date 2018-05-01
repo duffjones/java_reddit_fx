@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
@@ -14,10 +15,18 @@
             <Font size="34.0" />
          </font>
       </Label>
-      <ScrollPane layoutX="49.0" layoutY="68.0" prefViewportHeight="501.0" prefViewportWidth="717.0">
+      <ScrollPane layoutX="52.0" layoutY="78.0" prefViewportHeight="491.0" prefViewportWidth="707.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="39.0" AnchorPane.topAnchor="78.0">
          <content>
-            <VBox fx:id="subredphotos" layoutX="49.0" layoutY="68.0" prefHeight="501.0" prefWidth="717.0" />
+            <VBox fx:id="subredphotos" layoutX="42.0" layoutY="68.0" prefHeight="501.0" prefWidth="717.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="68.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
          </content>
       </ScrollPane>
+      <Button fx:id="returnbutton" layoutX="607.0" layoutY="28.0" mnemonicParsing="false" onAction="#buttonClicked" text="Button" />
    </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
 </AnchorPane>

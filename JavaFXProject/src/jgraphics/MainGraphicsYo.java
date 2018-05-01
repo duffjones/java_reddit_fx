@@ -31,24 +31,16 @@ public class MainGraphicsYo extends Application {
        Parent root = FXMLLoader.load(getClass().getResource("jredditFXML.fxml"));
         Scene scene = new Scene(root, 761, 798);
         stage.setTitle("FXML Welcome");
+        
+        stage.setMinWidth(700);
+        stage.setMinHeight(500);
+        stage.setMaxWidth(1600);
         stage.setScene(scene);
+        
         stage.show();
         WindowController controller = new WindowController(); 
         controller.setStage(stage);
     }
-    
-//    public void changeRoots(Button btnBeginTargeting) throws IOException {
-//    	
-//       // appStage=(Stage)btnBeginTargeting.getScene().getWindow();
-//        Parent root; 
-//        root=FXMLLoader.load(getClass().getResource("jred_secondary.fxml"));
-//        this.scene.setRoot(root);
-//    	
-//    	
-//    }
-    
-    
-    
-    
-    
+ 
+
 }

@@ -1,0 +1,12 @@
+.anchor{
+
+    
+
+-fx-background-color: linear-gradient(to bottom, #f0f9ff 28%,#f0f9ff 28%,#d8f0ff 74%,#bfe7ff 100%);  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+
+.image{
+    
+      -fx-image-rendering: crisp-edges;
+}

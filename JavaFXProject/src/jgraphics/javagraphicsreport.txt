@@ -1,0 +1,157 @@
+Day One: 
+
+Brainstorming ideas. Getting JAVAFX up and running with eclipse. Deciding on JAVAFX over swing because it is still supported, and has more documentation recently published. 
+
+I decided that in light of the high stress of end of term, I would do better to stay motivated if I chose a project that was relevant to my interests, and a potential resume booster. 
+
+I settled on creating a Reddit.com bot that would use reddits API to scrape, and present user data graphically in JavaFX. I thought this would be interesting, because most reddit bots are currently written in python, and support for java is seriously lacking. 
+
+I found an open source reddit API wrapper called JRAW on github: https://legacy.gitbook.com/book/mattbdean/jraw/details
+
+Since the goal of this project is graphics, I thought it would be fine to cut some corners and use this to reduce my development time. 
+
+Getting it setup was quite frustrating. 
+
+I added the repository to my eclipse project using Maven. 
+
+I then registered my test app idea with Reddit.com, and they issued me a public and private key to be used for their OAuth2 validation, when running my bot. 
+
+Next I created a simple script to pull the reddit front page and print it to terminal: 
+
+public ArrayList<String> frontpage() {
+    
+    	
+     ArrayList<String> frontpage = new ArrayList<String>();
+    	
+    	
+      DefaultPaginator<Submission> frontPage = reddit.frontPage()
+    		    .sorting(SubredditSort.TOP)
+    		    .timePeriod(TimePeriod.DAY)
+    		    .limit(5)
+    		    .build();
+
+    		Listing<Submission> submissions = frontPage.next();
+    		for (Submission s : submissions) {
+    		    System.out.println(s.getTitle());
+    		    frontpage.add(s.getTitle());
+    		}
+      
+    		return frontpage; 
+    }
+
+I created a new class, and refactored the reddit code away from the JavaFX base of my program. I then used JAVAFX to print some basic information pulled from reddit. Starting with a single title. 
+
+
+After I got that working, I wanted to recreate the front page of reddit as its printed in my terminal. At first I thought this would be best executed with a ListView, which is a specific structure in JavaFX. Unfortunately, I had a really hard time getting the contents of an ArrayList, and eventually an ObservableList, into my ArrayList to then be created by the FXML file. I think my program was trying to render the screen before it had a chance to pull the data from the Reddit.api, which was causing errors. 
+
+Since time was a factor, instead of tackling that problem I tried using an Accordion instead, as it's 'pane' elements seem easier to work with. First I got a prototype of a dynamic accordion working by creating a button event that would instantiate a new pane to my accordion. The next step was figuring how to pass the data from my ArrayList of reddit data to that FXML controller. 
+
+I managed to get this work a lot faster than list view. With this code I was able to make my button generate instances of tiles with the title data from the front page of reddit: 
+
+    @FXML
+    private void handleButtonAction(ActionEvent event) {
+        System.out.println("test");
+        addTile();s
+    }
+
+
+    private void addTile() {  	
+        AnchorPane newPanelContent = new AnchorPane();
+        newPanelContent.getChildren().add(new Label(redditdata.get(i)));
+        i++;
+        TitledPane pane = new TitledPane("World Pane", newPanelContent);
+        System.out.println("test 2");
+        accord.getPanes().add(pane);
+    }
+    
+
+Unfortunately, I took a week long break to work on my literature review, and in the meantime the code base for my reddit api was broken. Suddenly the paginator I was using to store all the site information stopped working, and I had to take a day to figure out an alternative. It seemed like abandoning the project would be the only option, as the next API patch isn't coming for quite some time. 
+
+However, I found an older version of JRAWs paginator, and am attempting to implement that. With a little experimentation I discovered that it was the sorting function that was causing trouble, when making calls to the Reddit API. But removing the sorts from my code I am up and running again. 
+
+Once I was back on track I wanted to implement images on the frontpage based on links pulled from the reddit.api. Initially I tried to use JavaFX ImageView in order to load the image, but ran into issues with using a URL as the address for the image. I tried abstracting, and creating a method that creates an image, then adds that image to an ImageView, but got stuck. THen I discovered WebView, which creates a pane from a URL and displays images rather nicely. 
+
+I am worried that WebView will be too memory intensive to present too many images, but I think it may be useful in opening a window to a subreddit, or thread. I will have to go back and try to find a simpler way of doing just images. 
+
+Eventually I figured out how to get ImageViewer working, and properly formatted when it comes to dynamic sizing in my Accordion in SceneBuilder:
+
+        ImageView imagetest = new ImageView(new Image(new String(imagelinks.get(i))));
+
+        imagetest.setPreserveRatio(true);
+        imagetest.fitHeightProperty().bind(pane.heightProperty());
+        newPanelContent.getChildren().add(imagetest);
+        accord.getPanes().add(pane);
+    }
+
+
+
+
+With a working accordion of the images from recent top reddit posts, I decided to move onto the next challenge: changing roots, and scenes, so that buttons could change the window my program was displaying. I thought an interesting application could be a textfield that allowed the user to search for a subreddit, and return a gallery of the images on that subreddit. I got this working pretty quickly by creating a second .FXML file, and adding a button handler to my Controller class that changes the root of my existing scene: 
+
+    @FXML
+    public void buttonClicked(ActionEvent event)throws IOException
+    {
+        Parent root;
+        if(event.getSource()==btnBeginTargeting)
+        {
+           root=FXMLLoader.load(getClass().getResource("jred_secondary.fxml"));
+           btnBeginTargeting.getScene().setRoot(root);
+        }
+        if(event.getSource()==btnExit)
+        {
+            Platform.exit();
+        }
+    }
+
+
+Once again... this turned into a huge problem. I find it difficult accessing methods outside the controller that have to do with the Stage/Root. Also, when changing the root of a scene, my initialization in the controller runs a second time, causing big issues. Not sure how to resolve this. It seems like each FXML file should have its own Controller, which is annoying. Will consider using an if statement to check the root and only initialize certain things at certain times. 
+
+Eventually I realized a second controller was definitely the best approach, but then the issue became passing paramaters between controllers. This should be relatively simple, but the way FXML files are generated, everything must be passed before initialization. I finally managed this by creating a new "Passer" class with only one instance. That class then had set/get methods. In order to pass values from my first controller, I would set them in Passer, and then access them upon initialization of the second controller. 
+
+public class Passer {
+    private final static Passer instance = new Passer();
+
+    public static Passer getInstance() {
+        return instance;
+    }
+
+    private String subreddit = new String();
+
+    public void setSubreddit(String subname) {
+    	subreddit = subname; 
+    }
+    
+    public String currentSubreddit() {
+        return subreddit;
+    }
+}
+
+This really opened up the project. Once passing was in place, I was able to create a TextField attached to a button in my first controller. The button saves the user entered String in the textfield, and passes it to the Passer class. Then the second controller accesses that Passer, and can use the string to target the reddit.api. Allowing us to use the textfield to search subreddits for their content, and present that content on a second root. 
+
+MAIN:
+
+     name = subtextfield.getText();
+         Passer.getInstance().setSubreddit(name);
+
+SECONDARY: 
+
+	String subby = Passer.getInstance().currentSubreddit(); 
+    	System.out.println(subby);
+    	label.setText(subby);
+    	sublinks = reddit.getSubredditImgs(subby);
+
+
+I then took some time to work on formatting my FXML designs. This meant doing some work with alignment inside of my hbox and vbox elements, making sure spacing worked at multiple resolutions. I added CSS to change some background colors, and started structuring the GUI. Then I experimented with implementing a CSS stylesheet to allow for more specific control over certain elements. At first I couldn't get it working, but eventually I discovered the need to attach it to the FIRST node element in scene builder, make the file available in the appropriate place in the directory, AND attach a css tag to each element to be affected. With that fixed, I added a color gradient to the background, and attached an image of the reddit logo for the banner, using css to handle its resolution and any issues with transparency and graniness. There is quite a bit more graphical work to be done, but I will set that aside for a while and  return to design. 
+
+The biggest problems I am running into have to do with image size. I am loading so many high resolution images from the internet, and then squeezing them into Vbox, which is causing massive loading times. As a quick fix, I adjusted the number of posts being imported by the reddit.api. Since that still had signifant loading delays, I started looking into two things: preloaders, and loading bars. A preloader to run the initial program, and a loading bar for when the user selects a subreddit to create a gallery from. 
+
+
+
+
+
+
+Bugs: 
+
+If subreddit contains insufficient images, the program crashes. 
+
+
