@@ -21,7 +21,9 @@ import javafx.stage.Stage;
  
 public class MainGraphicsYo extends Application {
     public static void main(String[] args) {
-        launch(args);
+
+    	launch(args);
+
     }
     
     
@@ -29,7 +31,7 @@ public class MainGraphicsYo extends Application {
     public void start(Stage stage) throws Exception {
     
        Parent root = FXMLLoader.load(getClass().getResource("jredditFXML.fxml"));
-        Scene scene = new Scene(root, 761, 798);
+        Scene scene = new Scene(root, 900, 700);
         stage.setTitle("FXML Welcome");
         
         stage.setMinWidth(700);

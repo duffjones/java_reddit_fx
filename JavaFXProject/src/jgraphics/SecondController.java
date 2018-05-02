@@ -10,17 +10,20 @@ import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.control.cell.ComboBoxListCell;
@@ -29,7 +32,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
@@ -39,12 +46,17 @@ public class SecondController implements Initializable {
 	
 	private RedditHandler reddit = new RedditHandler();
 	ArrayList<String> sublinks = new ArrayList<String>();
+	ArrayList<ImageView> imagelist = new ArrayList<ImageView>();
+	
 	private String subredditname; 
 	private int i = 0; 
 	 
+	
+	@FXML
+	private Rectangle clipper; 
     
     @FXML
-    private VBox subredphotos; 
+    private TilePane subredphotos; 
     
     @FXML 
     private Label label; 
@@ -55,59 +67,72 @@ public class SecondController implements Initializable {
     @FXML
     private Button btnExit;
 
+    @FXML 
+    private Pane stackp; 
+    
     @FXML
     public void buttonClicked(ActionEvent event)throws IOException
     {
+    	
+        ProgressIndicator pi = new ProgressIndicator();
+        VBox box = new VBox(pi);
+        box.setAlignment(Pos.CENTER);
+    	stackp.getChildren().add(box);
         Parent root;
-        if(event.getSource()==returnbutton)
-        {
-           root=FXMLLoader.load(getClass().getResource("jredditFXML.fxml"));
-           returnbutton.getScene().setRoot(root);
-        }
-        if(event.getSource()==btnExit)
-        {
-            Platform.exit();
-        }
+                if(event.getSource()==returnbutton)
+                {
+                   root=FXMLLoader.load(getClass().getResource("jredditFXML.fxml"));
+                   returnbutton.getScene().setRoot(root);
+                }
+                if(event.getSource()==btnExit)
+                {
+                    Platform.exit();
+                }
+                System.out.print("thread returning null");
+
     }
     
-
-    private void addImages() {
-    	
-    	int imagecount = sublinks.size();
-    	int rows; 
-    	
-    	if(imagecount > 3) { rows = imagecount/3;}
-    	else {return;}
-    	    	
-    	for(int jj=1; jj<= rows; jj++){
-    		
-    	    HBox hbox = new HBox();
-    	    hbox.setPadding(new Insets(10, 10, 10, 10));
-    	    hbox.setSpacing(20);
-
-    	    for(int j=1; j<=3; j++){
-    	    	ImageView imagetest = new ImageView(new Image(new String((sublinks.get(i)))));
+    
+    Task<Void> task = new Task<Void>() {
+        @Override
+        protected Void call() throws Exception {
+    	    for(int j=0; j<9; j++){
+    	    	ImageView imagetest = new ImageView(new Image(new String((sublinks.get(i))), true));
     	    	imagetest.setPreserveRatio(true);
-    	    	imagetest.setFitHeight(200);
-    	    	hbox.getChildren().add(imagetest);
+    	     	imagetest.setFitHeight(200);
+    	    	imagelist.add(imagetest);
     	    	i++; 
     	    }  
-        subredphotos.getChildren().add(hbox);
-    	}
-
-    }
+			return null;
+        }
+    };
     
+    private void addImages() {
+    	subredphotos.setPrefTileHeight(200);
+    	subredphotos.setVgap(20);
+    	
+    	
+    	for(int j = 0; j<6; j++) {
+    	subredphotos.getChildren().add(imagelist.get(j));
+    }}
+
 	public void setSubreddit(String subreddit){
 	    this.subredditname = subreddit;
 	}
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-    	String subby = Passer.getInstance().currentSubreddit(); 
-    	System.out.println(subby);
-    	label.setText(subby);
+    	String subby = Passer.getInstance().currentSubreddit();
     	sublinks = reddit.getSubredditImgs(subby);
-    	addImages();  
+    	new Thread(task).start();
+    	task.setOnSucceeded(e -> {
+    		label.setText(subby);
+        	addImages();
+
+    	});
+    	
+    
+        
     } 
  
 }
